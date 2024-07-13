@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "UTF-8" />
+    <meta name    = "viewport" content = "width=device-width, initial-scale=1.0" />
+    <title>Project (Heliocentric Star Map) 1.0 - Home</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+            /* Global Styles */
+      body {
+        background-color: linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        );
+        font-family: "Kode Mono", monospace;
+        margin     : 0;
+        padding    : 0;
+        overflow-x : hidden;                  /* Prevent horizontal scrollbar */
+      }
+
+      .container {
+        text-shadow    : 2px 2px 12px Purple;
+        border         : 1px solid rgba(0, 70, 75, 0.575);
+        border-radius  : 20px;
+        backdrop-filter: blur(3px);
+        width          : 80%;
+        box-shadow     : -2px 2px 6px #5ff0ff;
+        margin         : auto;
+        padding        : 20px 0;
+      }
+        <!--testing out git hub -->
+      header {
+        backdrop-filter: blur(10px);
+        box-shadow     : #00dbff 2px 2px 12px;
+        padding        : 20px 0;
+        text-align     : center;
+        position       : fixed;
+        width          : 100%;
+        z-index        : 999;
+      }
+  /* header section starts form here */    
+
+      header h1 {
+        text-shadow: 3px 3px 12px #00ddff8f;
+        margin     : 0;
+        padding    : 1rem;
+        color      : #0074a1;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding        : 0;
+        margin         : 0;
+      }
+
+      nav ul li {
+        display     : inline;
+        margin-right: 20px;
+      }
+
+      nav ul li a {
+        color          : #fff;
+        text-decoration: none;
+      }
+
+      footer {
+        background-color: rgba(
+          2,
+          4,
+          15,
+          0.829
+        ); /* Darker blue footer with transparency */
+        padding   : 10px 0;
+        text-align: center;
+        position  : fixed;
+        bottom    : 0;
+        width     : 100%;
+      }
+
+            /* Home Section */
+      #home {
+        height         : 80vh;
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        text-align     : center;
+        padding-top    : 100px;     /* Added padding to accommodate fixed header */
+        position       : relative;
+      }
+
+      #home h2 {
+        font-size    : 2.5em;
+        margin-bottom: 20px;
+        color        : #fff;
+      }
+
+      #home p {
+        font-size    : 1.2em;
+        margin-bottom: 30px;
+        color        : #b9b9b9;
+      }
+
+      .btn {
+        text-shadow: 3px 3px 12px #00ddffb0;
+        padding    : 10px 20px;
+              /* background-color: #0099ff; */
+        border         : 1px solid transparent;
+        color          : #fff;
+        text-decoration: none;
+        border-radius  : 10px;
+        transition     : all 0.75s ease-in-out;
+      }
+
+      .btn:hover {
+        background: #007386;                /* Darker blue on hover */
+        transition: all 0.75s ease-in-out;
+        box-shadow: 1px 1px 6px #5ff0ff;
+      }
+
+            /* Video background */
+      video {
+        background: black;
+        opacity   : 90%;
+        position  : fixed;
+        top       : 0;
+        left      : 0;
+        min-width : 100%;
+        min-height: 100%;
+        z-index   : -1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <video autoplay loop muted>
+      <source src = "video/Zooming out from Earth (4K).mp4" type = "video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <header>
+      <h1>Project (Heliocentric Star Map) 1.0</h1>
+      <nav>
+        <ul>
+          <li><a href = "portfolio.html">Portfolio</a></li>
+          <li><a href = "about.html">About</a></li>
+          <li><a href = "contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id    = "home">
+    <div     class = "container">
+        <h2>Welcome to Project (Heliocentric Star Map) 1.0</h2>
+        <p>
+          Explore the wonders of the solar system with our interactive star map.
+        </p>
+        <a href = "index.html" class = "btn">View - Project</a>
+      </div>
+    </section>
+
+    <footer>
+      <p
+        style="
+          color      : 5ff0ff;
+          font-family: monospace;
+          font-weight: bolder;
+          font-size  : large;
+          font-family: Kode Mono, monospace;
+        "
+      >
+        &copy; Created by Abdullah
+      </p>
+    </footer>
+  </body>
+</html>
