@@ -1,89 +1,125 @@
 @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
-
-  /* styles.css */
-
+*{
+  scroll-behavior:smooth;
+}
+/* Reset and basic styles */
 body {
-  font-family     : Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #111;
-  color           : #fff;
-  margin          : 0;
-  padding         : 0;
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
+/* Header styles */
 header {
   background-color: #222;
-  padding         : 20px 0;
-}
-/*just for commit pourpous*/
-header h1 {
-  text-align         : center;
-  margin             : 0;
-  padding            : 20px;
-  font-family        : "Kode Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight        : 800;
-  font-style         : normal;
+  padding: 20px 0;
 }
 
+header h1 {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  font-family: "Kode Mono", monospace;
+  font-weight: 800;
+  font-size: 36px;
+}
+
+/* Navigation styles */
 nav ul {
   list-style-type: none;
-  padding        : 0;
-  margin         : 0;
-  text-align     : center;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 nav ul li {
-  display     : inline;
+  display: inline;
   margin-right: 20px;
 }
 
 nav ul li a {
-  color          : #fff;
+  color: #fff;
   text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
+nav ul li a:hover {
+  background-color: #4caf50; /* Neon green on hover */
+}
+
+/* Main content container */
 .container {
-  width     : 80%;
-  margin    : auto;
-  padding   : 20px 0;
+  width: 80%;
+  margin: auto;
+  padding: 20px 0;
   text-align: center;
 }
+.container>p{
+  line-height: 2rem;
+  word-spacing: 2px;
+  font-family: monospace;
+  color: #4caf50;
+  font-size: large;
+}
 
+/* Team member section */
 .team-member {
-  display  : flex;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .member-details {
-  flex            : 1;
-  margin          : 10px;
-  padding         : 20px;
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
   background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
+.member-details h3 {
+  color: #4caf50; /* Neon green */
+  font-size: 24px;
+}
+
+.member-details p {
+  color: #ccc;
+}
+
+/* Footer styles */
 footer {
   background-color: #222;
-  padding         : 10px 0;
-  text-align      : center;
+  padding: 10px 0;
+  text-align: center;
 }
 
+/* Gallery section */
 .slider {
-  display         : flex;
-  overflow-x      : auto;
+  display: flex;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
 }
 
 .slider img {
-  flex             : 0 0 auto;
-  width            : 100%;
+  flex: 0 0 auto;
+  width: 100%;
   scroll-snap-align: start;
 }
 
+/* Form styles */
 form {
-  display       : flex;
-  flex-direction: column;
-  max-width     : 400px;
-  margin        : auto;
+  max-width: 400px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .form-group {
@@ -91,28 +127,35 @@ form {
 }
 
 label {
+  color: #fff;
   margin-bottom: 5px;
 }
 
 input,
 textarea {
-  padding         : 10px;
-  border          : none;
-  background-color: #333;
-  color           : #fff;
-  border-radius   : 5px;
+  padding: 10px;
+  border: none;
+  background-color: #444; /* Darker background */
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #555; /* Slightly lighter on focus */
 }
 
 button {
-  padding         : 10px 20px;
-  border          : none;
-  background-color: #4caf50;
-  color           : #fff;
-  border-radius   : 5px;
-  cursor          : pointer;
-  transition      : background-color 0.3s ease;
+  padding: 10px 20px;
+  border: none;
+  background-color: #4caf50; /* Neon green */
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #45a049; /* Darker shade on hover */
 }

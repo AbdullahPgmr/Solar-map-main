@@ -1,106 +1,117 @@
 <!DOCTYPE html>
-<html lang = "en">
-  <head>
-    <meta charset = "UTF-8" />
-    <meta name    = "viewport" content = "width=device-width, initial-scale=1.0" />
-    <title>Project (Heliocentric Star Map) 1.0</title>
-    <link rel = "stylesheet" href = "assets/css/Portfolio.css" />
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project (Heliocentric Star Map) 1.0</title>
+  <link rel="stylesheet" href="assets/css/Portfolio.css" />
+  <style>
+    /* CSS for the gallery images */
+    .slider img {
+      width: 400px;
+      height: 300px;
+      object-fit: cover; /* Maintain aspect ratio and cover */
+      margin-right: 10px; /* Adjust margin between images */
+    }
+  </style>
+</head>
 
-  <body>
-    <header>
-      <h1>Project (Heliocentric Star Map) 1.0</h1>
-      <!-- sample
-       -->
-      <p>helloo world</p>
-      <nav>
-        <ul>
-          <li><a href = "#about">About</a></li>
-          <li><a href = "#team">Team</a></li>
-          <li><a href = "#gallery">Gallery</a></li>
-          <li><a href = "#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+<body>
+  <header>
+    <h1>Project (Heliocentric Star Map) 1.0</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Solar Map</a></li>
+        <li><a href="home.html">Home Page</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
 
-    <!--!about section  -->
-    <section id    = "about">
-    <div     class = "container">
-        <h2>About the Project</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-          pariatur beatae omnis praesentium, quas illum commodi facilis eos modi
-          id minima vel, iusto error, accusamus eius molestiae repudiandae
-          maxime. Autem.
-        </p>
-      </div>
-    </section>
-    <!--!about section  -->
-    <section id    = "team">
-    <div     class = "container">
-        <h2>Our Team</h2>
-        <div class = "team-member">
-        <div class = "member-details">
-            <h3>Sajid</h3>
-            <p>Founder</p>
-          </div>
-          <div class = "member-details">
-            <h3>Abdullah</h3>
-            <p>Main Web Developer</p>
-          </div>
-          <div class = "member-details">
-            <h3>Akash</h3>
-            <p>Secondary Web Developer</p>
-          </div>
-          <div class = "member-details">
-            <h3>Faisal</h3>
-            <p>Graphic Designer</p>
-          </div>
-          <div class = "member-details">
-            <h3>Unjila</h3>
-            <p>Speaker</p>
-          </div>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About section -->
+  <section id="about">
+    <div class="container">
+      <h2>About the Project</h2>
+      <p>
+        Welcome to the Heliocentric Star Map project, where we delve into the wonders of our solar system through a captivating visual journey. Our project aims to showcase the intricate orbits and relationships of celestial bodies orbiting the Sun, offering a unique perspective on our cosmic neighborhood.
+
+        Through meticulous data representation and innovative visualization techniques, we aim to provide a comprehensive and educational experience. Discover the stories behind planetary discoveries, the dynamics of orbits, and the significance of celestial phenomena in shaping our understanding of the universe.
+
+        Join us as we explore the beauty and complexity of the cosmos, blending scientific accuracy with artistic interpretation to create a visually stunning and intellectually enriching resource. Whether you're a student, an astronomy enthusiast, or simply curious about the universe, our project invites you to embark on a journey of discovery and wonder.
+      </p>
+    </div>
+  </section>
+
+  <!-- Team section -->
+  <section id="team">
+    <div class="container">
+      <h2>Our Team</h2>
+      <div class="team-member">
+        <div class="member-details">
+          <h3>Sajid</h3>
+          <p>Founder</p>
         </div>
-      </div>
-    </section>
-
-    <section id    = "gallery">
-    <div     class = "container">
-        <h2>Gallery</h2>
-        <div class = "slider">
-        <img src   = "image1.jpg" alt = "Image 1" />
-        <img src   = "image2.jpg" alt = "Image 2" />
-        <img src   = "image3.jpg" alt = "Image 3" />
-          <!-- Add more images as needed -->
+        <div class="member-details">
+          <h3>Abdullah</h3>
+          <p>Main Web Developer</p>
         </div>
+        <div class="member-details">
+          <h3>Akash</h3>
+          <p>Secondary Web Developer</p>
+        </div>
+        <div class="member-details">
+          <h3>Faisal</h3>
+          <p>Graphic Designer</p>
+        </div>
+        <!-- Removed Unjila's section -->
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id    = "contact">
-    <div     class = "container">
-        <h2>Contact Us</h2>
-        <form  action = "#" method = "POST">
-        <div   class  = "form-group">
-        <label for    = "name">Name:</label>
-        <input type   = "text" id  = "name" name = "name" required />
-          </div>
-          <div   class = "form-group">
-          <label for   = "email">Email:</label>
-          <input type  = "email" id = "email" name = "email" required />
-          </div>
-          <div      class = "form-group">
-          <label    for   = "message">Message:</label>
-          <textarea id    = "message" name = "message" required></textarea>
-          </div>
-          <button type = "submit">Send Message</button>
-        </form>
+  <!-- Gallery section -->
+  <section id="gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="slider">
+        <img src="assets/img/image1.jpg" alt="Image 1" class="gallery-image" />
+        <img src="assets/img/image2.jpg" alt="Image 2" class="gallery-image" />
+        <img src="assets/img/image3.jpg" alt="Image 3" class="gallery-image" />
+        <!-- Add more images as needed -->
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      <p>&copy; Created by Abdullah</p>
-    </footer>
+  <!-- Contact section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
 
-    <script src = "scripts.js"></script>
-  </body>
+
+  <footer>
+    <p>&copy; Created by Abdullah</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
 </html>
