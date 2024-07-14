@@ -5,82 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        overflow: hidden;
-      }
+                    body {
+              margin          : 0;
+              padding         : 0;
+              font-family     : Arial, sans-serif;
+              color           : #fff;
+              display         : flex;
+              justify-content : center;
+              align-items     : center;
+              height          : 100vh;
+              overflow        : hidden;
+              background-color: #222;               /* Dark background color */
+            }
 
-      .parallax {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        z-index: -1;
-      }
+            .parallax {
+              position: absolute;
+              width   : 100%;
+              height  : 100%;
+              overflow: hidden;
+              z-index : -1;
+            }
 
-      .parallax::before {
-        content: "";
-        /* background: url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg") no-repeat center center;
-        background-size: cover; */
-        background-image: url(assets/img/lock.png);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        transform: translateZ(-1px) scale(2); /* Creates the parallax effect */
-        will-change: transform;
-      }
+            .parallax::before {
+              content            : "";
+              background-image   : url('assets/img/lock.png');   /* Adjust your background image path */
+              background-repeat  : no-repeat;
+              background-position: center;
+              position           : absolute;
+              top                : 0;
+              left               : 0;
+              width              : 100%;
+              height             : 100%;
+              z-index            : -1;
+              transform          : translateZ(-1px) scale(1.1);  /* Adjust scale for parallax effect */
+              will-change        : transform;
+            }
 
-      .login-container {
-        backdrop-filter: blur(10px);
-        background-color: rgba(255, 255, 255, 0.1);
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
+            .login-container {
+              backdrop-filter : blur(10px);                         /* Apply backdrop blur for a modern look */
+              background-color: rgba(255, 255, 255, 0.1);
+              padding         : 30px;
+              border-radius   : 10px;
+              box-shadow      : 0 0 10px rgba(255, 255, 255, 0.5);
+              display         : flex;
+              flex-direction  : column;
+              justify-content : center;
+              align-items     : center;
+              animation       : slideIn 0.5s ease forwards;         /* Slide in animation */
+            }
 
-      .login-container h2 {
-        margin-bottom: 20px;
-        text-align: center;
-      }
-/* another test  */
-      .login-container input[type="text"],
-      .login-container input[type="password"] {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 20px;
-        border: none;
-        border-radius: 5px;
-        background-color: #fff;
-        color: #000;
-      }
+            @keyframes slideIn {
+              0% {
+                opacity  : 0;
+                transform: translateY(-50px);
+              }
+              100% {
+                opacity  : 1;
+                transform: translateY(0);
+              }
+            }
 
-      .login-container input[type="submit"] {
-        width: 100%;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        background-color: #007bff;
-        color: #fff;
-        cursor: pointer;
-      }
+            .login-container h2 {
+              margin-bottom: 20px;
+              text-align   : center;
+              font-size    : 24px;    /* Larger font size for the heading */
+            }
 
-      .login-container input[type="submit"]:hover {
-        background-color: #0056b3;
-      }
+            .login-container input[type="text"],
+            .login-container input[type="password"],
+            .login-container input[type="submit"] {
+              width           : 100%;
+              padding         : 14px;
+              margin-bottom   : 20px;
+              border          : none;
+              border-radius   : 5px;
+              background-color: rgba(255, 255, 255, 0.8);    /* Semi-transparent white background */
+              color           : #333;
+              font-size       : 16px;
+              transition      : background-color 0.3s ease;
+            }
+
+            .login-container input[type="submit"] {
+              background-color: #007bff;  /* Blue submit button */
+              color           : #fff;
+              cursor          : pointer;
+            }
+
+            .login-container input[type="submit"]:hover {
+              background-color: #0056b3;  /* Darker shade on hover */
+            }
+
     </style>
   </head>
   <body>
