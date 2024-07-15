@@ -7,31 +7,39 @@
 <style>
     body {
         background-color: black;
-        color: white;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
+        color           : white;
+        font-family     : Arial, sans-serif;
+        margin          : 0;
+        padding         : 0;
     }
-
+/* Navbar_tyles_with_shadow */
     .navbar {
         background-color: #333;
-        padding: 10px;
-        text-align: center;
+        padding         : 10px;
+        text-align      : center;
+        box-shadow      : 2px 2px 12px #5ff0ff;
     }
 
     .navbar a {
-        color: white;
+        color          : white;
+        text-align     : center;
         text-decoration: none;
-        margin: 0 10px;
+        margin         : 0 10px;
     }
 
     .planet-card {
-        border: 1px solid #333;
-        border-radius: 5px;
-        padding: 10px;
-        margin: 10px;
-        width: 300px;
-        background-color: #222;
+
+       text-align      : center;
+       box-shadow      : 2px 2px 12px #5ff0ff;
+       border          : 1px solid #333;
+       border-radius   : 5%;
+       padding         : 10px;
+       margin          : 20px;
+       width           : 300px;
+       height          : 600px;
+       background-color: #222;
+       backdrop-filter : blur(10px);
+
     }
 
     .planet-card img {
@@ -59,53 +67,53 @@ const planetsData = [
         image: "mercury.jpg",
     },
     {
-        name: "Venus",
+        name           : "Venus",
         distanceFromSun: "Second planet from the Sun, approximately 108 million km",
-        size: "Similar in size to Earth",
+        size           : "Similar in size to Earth",
         characteristics: "Known for its thick, toxic atmosphere mainly composed of carbon dioxide. Surface features include volcanoes and vast plains. It has a very slow rotation and is often called Earth's 'sister planet'",
-        image: "venus.jpg",
+        image          : "venus.jpg",
     },
     {
-        name: "Earth",
+        name           : "Earth",
         distanceFromSun: "Third planet from the Sun, about 150 million km",
-        size: "Largest rocky planet, with a diverse surface including oceans and continents",
+        size           : "Largest rocky planet, with a diverse surface including oceans and continents",
         characteristics: "Supports life due to its atmosphere (rich in nitrogen and oxygen) and moderate temperatures. It has a magnetic field that protects it from solar winds",
-        image: "earth.jpg",
+        image          : "earth.jpg",
     },
     {
-        name: "Mars",
+        name           : "Mars",
         distanceFromSun: "Fourth planet from the Sun, roughly 228 million km",
-        size: "Smaller than Earth, with a thin atmosphere",
+        size           : "Smaller than Earth, with a thin atmosphere",
         characteristics: "Known as the 'Red Planet' due to its iron oxide-rich surface. Features include the largest volcano (Olympus Mons) and the deepest canyon (Valles Marineris) in the solar system. Evidence suggests Mars once had liquid water on its surface",
-        image: "mars.jpg",
+        image          : "mars.jpg",
     },
     {
-        name: "Jupiter",
+        name           : "Jupiter",
         distanceFromSun: "Fifth planet from the Sun, approximately 778 million km",
-        size: "Largest planet in the solar system, primarily composed of hydrogen and helium",
+        size           : "Largest planet in the solar system, primarily composed of hydrogen and helium",
         characteristics: "Known for its immense size and strong magnetic field. Jupiter has a turbulent atmosphere with the Great Red Spot, a persistent storm larger than Earth. It has a ring system and over 70 known moons, including the largest moon Ganymede",
-        image: "jupiter.jpg",
+        image          : "jupiter.jpg",
     },
     {
-        name: "Saturn",
+        name           : "Saturn",
         distanceFromSun: "Sixth planet from the Sun, about 1.4 billion km",
-        size: "Second largest planet, also primarily composed of hydrogen and helium",
+        size           : "Second largest planet, also primarily composed of hydrogen and helium",
         characteristics: "Recognized for its extensive ring system made of ice and dust particles. Saturn has a complex atmosphere with distinctive cloud patterns and a hexagonal polar vortex. It has over 80 moons, including Titan, which has a thick atmosphere and lakes of liquid methane",
-        image: "saturn.jpg",
+        image          : "saturn.jpg",
     },
     {
-        name: "Uranus",
+        name           : "Uranus",
         distanceFromSun: "Seventh planet from the Sun, roughly 2.9 billion km",
-        size: "Smaller than Jupiter and Saturn but larger than Neptune",
+        size           : "Smaller than Jupiter and Saturn but larger than Neptune",
         characteristics: "Has a unique rotational axis tilted almost 90 degrees relative to its orbit (resulting in extreme seasonal variations). Uranus is composed mostly of ice and rock, with a faint ring system and a set of 13 known rings. It has a set of 27 known moons",
-        image: "uranus.jpg",
+        image          : "uranus.jpg",
     },
     {
-        name: "Neptune",
+        name           : "Neptune",
         distanceFromSun: "Eighth planet from the Sun, about 4.5 billion km",
-        size: "Similar in size to Uranus",
+        size           : "Similar in size to Uranus",
         characteristics: "Known for its vivid blue color due to methane in its atmosphere. Neptune has strong winds, including the fastest recorded in the solar system. It has a faint ring system and 14 known moons, including Triton, which orbits in the opposite direction to the planet's rotation",
-        image: "neptune.jpg",
+        image          : "neptune.jpg",
     },
 ];
 
@@ -115,24 +123,24 @@ planetsData.forEach(planet => {
     const planetCard = document.createElement('div');
     planetCard.classList.add('planet-card');
 
-    const planetImage = document.createElement('img');
-    planetImage.src = planet.image;
+    const planetImage     = document.createElement('img');
+          planetImage.src = planet.image;
     planetCard.appendChild(planetImage);
 
-    const planetHeading = document.createElement('h2');
-    planetHeading.textContent = planet.name;
+    const planetHeading             = document.createElement('h2');
+          planetHeading.textContent = planet.name;
     planetCard.appendChild(planetHeading);
 
-    const planetDistance = document.createElement('p');
-    planetDistance.textContent = `Distance from Sun: ${planet.distanceFromSun}`;
+    const planetDistance             = document.createElement('p');
+          planetDistance.textContent = `Distance from Sun: ${planet.distanceFromSun}`;
     planetCard.appendChild(planetDistance);
 
-    const planetSize = document.createElement('p');
-    planetSize.textContent = `Size: ${planet.size}`;
+    const planetSize             = document.createElement('p');
+          planetSize.textContent = `Size: ${planet.size}`;
     planetCard.appendChild(planetSize);
 
-    const planetCharacteristics = document.createElement('p');
-    planetCharacteristics.textContent = planet.characteristics;
+    const planetCharacteristics             = document.createElement('p');
+          planetCharacteristics.textContent = planet.characteristics;
     planetCard.appendChild(planetCharacteristics);
 
     planetsContainer.appendChild(planetCard);
