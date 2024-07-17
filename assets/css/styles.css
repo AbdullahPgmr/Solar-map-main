@@ -13,6 +13,7 @@ body{
  -ms-user-select      : none;
  user-select          : none;
 }
+
 .content{
 	margin           : auto;
 	width            : 100%;
@@ -20,7 +21,7 @@ body{
 	background-color : #100020;
 	position         : relative;
 	background-repeat: no-repeat;
-	background-image : url('https://res.cloudinary.com/yerevan/image/upload/v1484080037/space_xref1i.jpg');
+	/* background-image : url('https://res.cloudinary.com/yerevan/image/upload/v1484080037/space_xref1i.jpg'); */
 }
 .content:before{
 	content         : "";
