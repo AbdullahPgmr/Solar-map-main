@@ -1,19 +1,19 @@
-    //
+//
 
-var content           = document.getElementsByClassName("content")[0];
-var width             = content.offsetWidth;
-var height            = content.offsetHeight;
+var content = document.getElementsByClassName("content")[0];
+var width = content.offsetWidth;
+var height = content.offsetHeight;
 var verticalKaificent = 0.2;
-    deltaMerc         = 0;
-    deltaVenus        = 0;
-    deltaEarth        = 0;
-    deltaMars         = 0;
-    deltaJupiter      = 0;
-    deltaSaturn       = 0;
-    deltaUranus       = 0;
-    deltaNeptune      = 0;
-    deltaMoon         = 0;
-    n                 = 20;
+deltaMerc = 0;
+deltaVenus = 0;
+deltaEarth = 0;
+deltaMars = 0;
+deltaJupiter = 0;
+deltaSaturn = 0;
+deltaUranus = 0;
+deltaNeptune = 0;
+deltaMoon = 0;
+n = 20;
 spacePosition();
 drawCircles();
 scaleHandler();
@@ -22,130 +22,130 @@ $(window).scrollLeft($(window).width() / 2);
 
 var timerId;
 var $mercuryContainer = $(".mercury_container").eq(0);
-var mercuryX          = width / 2 - mercuryContainer.offsetWidth / 2;
-var mercuryY          = height / 2 - mercuryContainer.offsetHeight / 2;
-var mercury           = $(".shadow_mercury").eq(0);
+var mercuryX = width / 2 - mercuryContainer.offsetWidth / 2;
+var mercuryY = height / 2 - mercuryContainer.offsetHeight / 2;
+var mercury = $(".shadow_mercury").eq(0);
 
 var $venusContainer = $(".venus_container").eq(0);
-var venusX          = width / 2 - venusContainer.offsetWidth / 2;
-var venusY          = height / 2 - venusContainer.offsetHeight / 2;
-var venus           = $(".shadow_venus").eq(0);
+var venusX = width / 2 - venusContainer.offsetWidth / 2;
+var venusY = height / 2 - venusContainer.offsetHeight / 2;
+var venus = $(".shadow_venus").eq(0);
 
 var $earthMoonContainer = $(".earth_moon_container").eq(0);
-var earthX              = width / 2 - earthMoonContainer.offsetWidth / 2;
-var earthY              = height / 2 - earthMoonContainer.offsetHeight / 2;
-var earth               = $(".shadow_earth").eq(0);
+var earthX = width / 2 - earthMoonContainer.offsetWidth / 2;
+var earthY = height / 2 - earthMoonContainer.offsetHeight / 2;
+var earth = $(".shadow_earth").eq(0);
 
 var $moon = $(".moon").eq(0);
 var moonX = earthMoonContainer.offsetWidth / 2 - moon.offsetWidth / 2;
 var moonY = earthMoonContainer.offsetHeight / 2 - moon.offsetHeight / 2;
 
 var $marsContainer = $(".mars_container").eq(0);
-var marsX          = width / 2 - marsContainer.offsetWidth / 2;
-var marsY          = height / 2 - marsContainer.offsetHeight / 2;
-var mars           = $(".shadow_mars").eq(0);
+var marsX = width / 2 - marsContainer.offsetWidth / 2;
+var marsY = height / 2 - marsContainer.offsetHeight / 2;
+var mars = $(".shadow_mars").eq(0);
 
 var $jupiterContainer = $(".jupiter_container").eq(0);
-var jupiterX          = width / 2 - jupiterContainer.offsetWidth / 2;
-var jupiterY          = height / 2 - jupiterContainer.offsetHeight / 2;
-var jupiter           = $(".shadow_jupiter").eq(0);
+var jupiterX = width / 2 - jupiterContainer.offsetWidth / 2;
+var jupiterY = height / 2 - jupiterContainer.offsetHeight / 2;
+var jupiter = $(".shadow_jupiter").eq(0);
 
 var $saturnRingContainer = $(".saturn_ring_container").eq(0);
-var saturnX              = width / 2 - saturnRingContainer.offsetWidth / 2;
-var saturnY              = height / 2 - saturnRingContainer.offsetHeight / 2;
-var saturn               = $(".shadow_saturn").eq(0);
+var saturnX = width / 2 - saturnRingContainer.offsetWidth / 2;
+var saturnY = height / 2 - saturnRingContainer.offsetHeight / 2;
+var saturn = $(".shadow_saturn").eq(0);
 
 var $ringContainer = $(".ring_container").eq(0);
 
 var $uranusContainer = $(".uranus_container").eq(0);
-var uranusX          = width / 2 - uranusContainer.offsetWidth / 2;
-var uranusY          = height / 2 - uranusContainer.offsetHeight / 2;
-var uranus           = $(".shadow_uranus").eq(0);
+var uranusX = width / 2 - uranusContainer.offsetWidth / 2;
+var uranusY = height / 2 - uranusContainer.offsetHeight / 2;
+var uranus = $(".shadow_uranus").eq(0);
 
 var $neptuneContainer = $(".neptune_container").eq(0);
-var neptuneX          = width / 2 - neptuneContainer.offsetWidth / 2;
-var neptuneY          = height / 2 - neptuneContainer.offsetHeight / 2;
-var neptune           = $(".shadow_neptune").eq(0);
+var neptuneX = width / 2 - neptuneContainer.offsetWidth / 2;
+var neptuneY = height / 2 - neptuneContainer.offsetHeight / 2;
+var neptune = $(".shadow_neptune").eq(0);
 
 function spacePosition() {
   sun = document.getElementsByClassName("sun")[0];
 
-  sun.style.top  = height / 2 - sun.offsetHeight / 2 + "px";
+  sun.style.top = height / 2 - sun.offsetHeight / 2 + "px";
   sun.style.left = width / 2 - sun.offsetWidth / 2 + "px";
 
-  mercuryContainer           = document.getElementsByClassName("mercury_container")[0];
-  Rmercury                   = 90;
-  mercuryContainer.style.top = 
+  mercuryContainer = document.getElementsByClassName("mercury_container")[0];
+  Rmercury = 90;
+  mercuryContainer.style.top =
     height / 2 - mercuryContainer.offsetHeight / 2 + "px";
-  mercuryContainer.style.left = 
+  mercuryContainer.style.left =
     width / 2 - mercuryContainer.offsetWidth / 2 + Rmercury + "px";
 
-  venusContainer           = document.getElementsByClassName("venus_container")[0];
-  Rvenus                   = 130;
-  venusContainer.style.top = 
+  venusContainer = document.getElementsByClassName("venus_container")[0];
+  Rvenus = 130;
+  venusContainer.style.top =
     height / 2 - venusContainer.offsetHeight / 2 + "px";
-  venusContainer.style.left = 
+  venusContainer.style.left =
     width / 2 - venusContainer.offsetWidth / 2 + Rvenus + "px";
 
   earthMoonContainer = document.getElementsByClassName(
     "earth_moon_container"
   )[0];
-  Rearth                       = 185;
-  earthMoonContainer.style.top = 
+  Rearth = 185;
+  earthMoonContainer.style.top =
     height / 2 - earthMoonContainer.offsetHeight / 2 + "px";
-  earthMoonContainer.style.left = 
+  earthMoonContainer.style.left =
     width / 2 - earthMoonContainer.offsetWidth / 2 + Rearth + "px";
 
-  moon           = document.getElementsByClassName("moon")[0];
-  Rmoon          = 28;
-  moon.style.top = 
+  moon = document.getElementsByClassName("moon")[0];
+  Rmoon = 28;
+  moon.style.top =
     earthMoonContainer.offsetHeight / 2 - moon.offsetHeight / 2 + "px";
-  moon.style.left = 
+  moon.style.left =
     earthMoonContainer.offsetWidth / 2 - moon.offsetWidth / 2 + Rmoon + "px";
 
-  marsContainer            = document.getElementsByClassName("mars_container")[0];
-  Rmars                    = 240;
-  marsContainer.style.top  = height / 2 - marsContainer.offsetHeight / 2 + "px";
-  marsContainer.style.left = 
+  marsContainer = document.getElementsByClassName("mars_container")[0];
+  Rmars = 240;
+  marsContainer.style.top = height / 2 - marsContainer.offsetHeight / 2 + "px";
+  marsContainer.style.left =
     width / 2 - marsContainer.offsetWidth / 2 + Rmars + "px";
 
-  jupiterContainer           = document.getElementsByClassName("jupiter_container")[0];
-  Rjupiter                   = 320;
-  jupiterContainer.style.top = 
+  jupiterContainer = document.getElementsByClassName("jupiter_container")[0];
+  Rjupiter = 320;
+  jupiterContainer.style.top =
     height / 2 - jupiterContainer.offsetHeight / 2 + "px";
-  jupiterContainer.style.left = 
+  jupiterContainer.style.left =
     width / 2 - jupiterContainer.offsetWidth / 2 + Rjupiter + "px";
 
-  Rsaturn             = 430;
+  Rsaturn = 430;
   saturnRingContainer = document.getElementsByClassName(
     "saturn_ring_container"
   )[0];
-  saturnRingContainer.style.top = 
+  saturnRingContainer.style.top =
     height / 2 - saturnRingContainer.offsetHeight / 2 + "px";
-  saturnRingContainer.style.left = 
+  saturnRingContainer.style.left =
     width / 2 - saturnRingContainer.offsetWidth / 2 + Rsaturn + "px";
   Rring = 60;
 
-  uranusContainer           = document.getElementsByClassName("uranus_container")[0];
-  Ruranus                   = 510;
-  uranusContainer.style.top = 
+  uranusContainer = document.getElementsByClassName("uranus_container")[0];
+  Ruranus = 510;
+  uranusContainer.style.top =
     height / 2 - uranusContainer.offsetHeight / 2 + "px";
-  uranusContainer.style.left = 
+  uranusContainer.style.left =
     width / 2 - uranusContainer.offsetWidth / 2 + Ruranus + "px";
 
-  neptuneContainer           = document.getElementsByClassName("neptune_container")[0];
-  Rneptune                   = 560;
-  neptuneContainer.style.top = 
+  neptuneContainer = document.getElementsByClassName("neptune_container")[0];
+  Rneptune = 560;
+  neptuneContainer.style.top =
     height / 2 - neptuneContainer.offsetHeight / 2 + "px";
-  neptuneContainer.style.left = 
+  neptuneContainer.style.left =
     width / 2 - neptuneContainer.offsetWidth / 2 + Rneptune + "px";
 }
-var start         = document.getElementById("start");
-    start.onclick = function () {
+var start = document.getElementById("start");
+start.onclick = function () {
   timerId = setInterval(move, 20);
 };
-var stop         = document.getElementById("stop");
-    stop.onclick = function () {
+var stop = document.getElementById("stop");
+stop.onclick = function () {
   clearInterval(timerId);
 };
 function move() {
@@ -247,7 +247,7 @@ function moveMars() {
   }
 }
 function moveJupiter() {
-  var obj   = $(".jupiter_container").eq(0);
+  var obj = $(".jupiter_container").eq(0);
   var alpha = (Math.PI * deltaJupiter) / 180;
   $jupiterContainer.css(
     "top",
@@ -374,7 +374,7 @@ function drawCircles() {
 
 function scaleHandler() {
   var currentMousePos = { x: -1, y: -1 };
-  var isDragged       = false;
+  var isDragged = false;
 
   $(document).mousemove(function (event) {
     if (!isDragged) {
@@ -389,52 +389,52 @@ function scaleHandler() {
       $mercuryContainer.css(
         "top",
         mercuryY +
-          Rmercury * Math.sin((Math.PI * deltaMerc) / 180) * verticalKaificent
+        Rmercury * Math.sin((Math.PI * deltaMerc) / 180) * verticalKaificent
       );
       $venusContainer.css(
         "top",
         venusY +
-          Rvenus * Math.sin((Math.PI * deltaVenus) / 180) * verticalKaificent
+        Rvenus * Math.sin((Math.PI * deltaVenus) / 180) * verticalKaificent
       );
       $earthMoonContainer.css(
         "top",
         earthY +
-          Rearth * Math.sin((Math.PI * deltaEarth) / 180) * verticalKaificent
+        Rearth * Math.sin((Math.PI * deltaEarth) / 180) * verticalKaificent
       );
       $moon.css(
         "top",
         moonY +
-          Rmoon * Math.sin((Math.PI * deltaMoon) / 180) * verticalKaificent
+        Rmoon * Math.sin((Math.PI * deltaMoon) / 180) * verticalKaificent
       );
 
       $marsContainer.css(
         "top",
         marsY +
-          Rmars * Math.sin((Math.PI * deltaMars) / 180) * verticalKaificent
+        Rmars * Math.sin((Math.PI * deltaMars) / 180) * verticalKaificent
       );
       $jupiterContainer.css(
         "top",
         jupiterY +
-          Rjupiter *
-            Math.sin((Math.PI * deltaJupiter) / 180) *
-            verticalKaificent
+        Rjupiter *
+        Math.sin((Math.PI * deltaJupiter) / 180) *
+        verticalKaificent
       );
       $saturnRingContainer.css(
         "top",
         saturnY +
-          Rsaturn * Math.sin((Math.PI * deltaSaturn) / 180) * verticalKaificent
+        Rsaturn * Math.sin((Math.PI * deltaSaturn) / 180) * verticalKaificent
       );
       $uranusContainer.css(
         "top",
         uranusY +
-          Ruranus * Math.sin((Math.PI * deltaUranus) / 180) * verticalKaificent
+        Ruranus * Math.sin((Math.PI * deltaUranus) / 180) * verticalKaificent
       );
       $neptuneContainer.css(
         "top",
         neptuneY +
-          Rneptune *
-            Math.sin((Math.PI * deltaNeptune) / 180) *
-            verticalKaificent
+        Rneptune *
+        Math.sin((Math.PI * deltaNeptune) / 180) *
+        verticalKaificent
       );
     }
   });
